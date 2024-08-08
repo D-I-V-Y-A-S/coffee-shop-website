@@ -209,9 +209,10 @@ section{
     display: flex;
     align-items: center;
     background:url(../images/home-img.jpg) no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain; 
+     background-position: center calc(50% + 30%); 
 }
+
 
 .home .content{
     max-width: 60rem;
