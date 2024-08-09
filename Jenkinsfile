@@ -1,26 +1,15 @@
 pipeline
-{agent any
-    stages{
-        stage("Build")
-        {
-            steps
-            {
-                bat 'make'
-            }
-        }
-        stage("Test")
-        {
-            steps
-            {
-                bat 'make test'
-            }
-        }
-         stage("Deploy")
-        {
-            steps
-            {
-                bat 'make deploy'
-            }
-        }
+{
+    agent any
+   post
+   {
+    success
+    {
+        echo "Completed Successfully!"
     }
+    failure
+    {
+        echo "Deployment failed!"
+    }
+   }
 }
