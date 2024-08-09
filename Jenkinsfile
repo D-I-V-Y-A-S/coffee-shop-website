@@ -1,6 +1,12 @@
 pipeline
 {
     agent any
+    stages{
+        stage ("Build")
+        {
+            echo "Build Successfully!"
+        }
+    }
    post
    {
     success
