@@ -1,12 +1,11 @@
 pipeline {
     agent any
-
     stages {
-      stage('Pull from GitHub') {
+      stage('Hello') {
             steps {
-                git branch: 'main'
+                echo 'hello'
             }
-    }
+   
     post {
         success {
             echo 'Completed Successfully!'
@@ -15,5 +14,6 @@ pipeline {
             echo 'Deployment failed!'
         }
     }
-}
+      }
+    }
 }
