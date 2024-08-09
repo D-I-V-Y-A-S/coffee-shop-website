@@ -4,7 +4,7 @@ pipeline {
     stages {
       stage('Pull from GitHub') {
             steps {
-                git branch: 'main', url: 'githubreponame'
+                git branch: 'main'
             }
     }
     post {
