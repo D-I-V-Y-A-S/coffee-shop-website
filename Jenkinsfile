@@ -2,13 +2,11 @@ pipeline {
     agent any
 
     stages {
-       stage('Example') {
+      stage('Pull from GitHub') {
             steps {
-                echo 'Hello World'
+                git branch: 'main', url: 'githubreponame'
             }
-        }
     }
-
     post {
         success {
             echo 'Completed Successfully!'
