@@ -1,10 +1,11 @@
 pipeline {
     agent any
     stages {
-      stage('Hello') {
+      stage('Build') {
             steps {
                 echo 'hello'
             }
+      }
    
     post {
         success {
@@ -14,6 +15,5 @@ pipeline {
             echo 'Deployment failed!'
         }
     }
-      }
-    }
+}
 }
