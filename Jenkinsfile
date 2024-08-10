@@ -1,18 +1,23 @@
 pipeline {
     agent any
+
     stages {
-        stage('Build') {
+        stage('Deploy') {
             steps {
-                echo 'hello'
+                echo 'Deploying the HTML file...'
             }
         }
     }
+
     post {
+        always {
+            echo 'Pipeline execution finished.'
+        }
         success {
-            echo 'Completed Successfully!'
+            echo 'Pipeline completed successfully!'
         }
         failure {
-            echo 'Deployment failed!'
+            echo 'Pipeline failed!'
         }
     }
 }
